@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>backdrop-filter</title>
+    <style>
+        .container-fluid{
+            background: url('./images/coffeeBg.png') no-repeat center/cover;
+            width: 100%;
+            height: 100vh;
+        }
+        .none{
+            backdrop-filter: none;
+        }
+        .grayscale{
+            backdrop-filter: grayscale(1);
+        }
+        .brightness{
+            backdrop-filter: brightness(1.5);
+        }
+        .blur{
+            backdrop-filter: blur(5px);
+        }
+        .contrast{
+            backdrop-filter: contrast(0.8);
+        }
+        .invert{
+            backdrop-filter: invert(0.7);
+        }
+        .sepia{
+            backdrop-filter: sepia(0.4);
+        }
+        .saturate{
+            backdrop-filter: saturate(1.8);
+        }
+        .hue-rotate{
+            backdrop-filter: hue-rotate(120deg);
+        }
+        .col:first-child{
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 0px;
+            }
+            .col:last-child{
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 5px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 5px;
+            }
+        @media (min-width:992px) {
+            .row{
+                align-items: center;
+            }
+            .col{
+                height: 80%;
+            }
+            .col:first-child{
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            .col:last-child{
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body class="m-0 p-0">
+    <div class="container-fluid p-0">
+        <div class="row d-flex justify-content-center flex-column text-light m-0 p-5 flex-lg-row  text-center h-100 justify-content-lg-start flex-nowrap overflow-scroll">
+            <div class="col col-lg-3 m-0 p-4 border border-light h1 ">backdrop-filter效果</div>
+            <div class="col col-lg-3 m-0 p-4 border border-light none h4">backdrop-filter: none</div>
+            <div class="col col-lg-3 m-0 p-4 border border-light grayscale h4">backdrop-filter: grayscale(1)</div>
+            <div class="col col-lg-3 m-0 p-4 border border-light brightness h4">backdrop-filter: brightness(1.5)</div>
+            <div class="col col-lg-3 m-0 p-4 border border-light blur h4">backdrop-filter: blur(5px)</div>
+            <div class="col col-lg-3 m-0 p-4 border border-light contrast h4">backdrop-filter: contrast(0.8)</div>
+            <div class="col col-lg-3 m-0 p-4 border border-light invert h4">backdrop-filter: invert(0.7)</div>
+            <div class="col col-lg-3 m-0 p-4 border border-light bg-opacity-25 h4">backdrop-filter: opacity(0.4)</div>
+            <div class="col col-lg-3 m-0 p-4 border border-light sepia h4">backdrop-filter: sepia(0.4)</div>
+            <div class="col col-lg-3 m-0 p-4 border border-light saturate h4">backdrop-filter: saturate(1.8)</div>
+            <div class="col col-lg-3 m-0 p-4 border border-light hue-rotate h4">backdrop-filter: hue-rotate(120deg)</div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
